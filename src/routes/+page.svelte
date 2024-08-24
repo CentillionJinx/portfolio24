@@ -1,59 +1,41 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+	import Layout from './+layout.svelte';
+	let isBlurred = false;
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
-
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<Layout>
+	<section class={isBlurred ? 'blurred' : ''}>
+		<button
+			class="btn btn-outline btn-lg btn-secondary royalText tracking-widest text-2xl"
+			on:mouseover={() => (isBlurred = true)}
+			on:focus={() => (isBlurred = true)}
+			on:mouseout={() => (isBlurred = false)}
+			on:blur={() => (isBlurred = false)}
+		>
+			Welcome
+		</button>
+	</section>
+</Layout>
 
 <style>
 	section {
+		height: 98vh;
+		width: 98vw;
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex: 0.6;
+		transition:
+			background 0.3s ease,
+			border-radius 0.3s ease,
+			box-shadow 0.3s ease,
+			backdrop-filter 0.3s ease,
+			-webkit-backdrop-filter 0.3s ease;
 	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	.blurred {
+		background: rgba(40, 40, 40, 0.43);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(13.5px);
+		-webkit-backdrop-filter: blur(13.5px);
 	}
 </style>

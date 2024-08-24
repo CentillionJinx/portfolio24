@@ -32,6 +32,24 @@ body {
 		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
 }
 
+@font-face {
+	font-family: 'Bold';
+	src: url('../src/lib/fonts/Bold.ttf');
+}
+
+@font-face {
+	font-family: 'Royal';
+	src: url("../src/lib/fonts/Royal.otf");
+}
+
+.boldText {
+	font-family: 'Bold';
+}
+
+.royalText {
+	font-family: 'Royal';
+}
+
 h1,
 h2,
 p {
