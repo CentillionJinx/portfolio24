@@ -47,11 +47,11 @@
 		justify-content: center;
 		align-items: center;
 		transition:
-			background 0.7s ease,
-			border-radius 0.7s ease,
-			box-shadow 0.7s ease,
-			backdrop-filter 0.7s ease,
-			-webkit-backdrop-filter 0.7s ease;
+			background 1.5s ease-in-out,
+			border-radius 1.5s ease-in-out,
+			box-shadow 1.5s ease-in-out,
+			backdrop-filter 1.5s ease-in-out,
+			-webkit-backdrop-filter 1.5s ease-in-out;
 	}
 	section > div {
 		display: flex;
@@ -60,7 +60,7 @@
 		width: 100%;
 	}
 	.blurred {
-		animation: pulsate-bg 1s infinite ease-in-out;
+		animation: pulsate-bg 2s infinite ease-in-out;
 		border-radius: 1rem;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(13.5px);
@@ -118,13 +118,16 @@
 	}
 	@keyframes pulsate-bg {
     0% {
+        background: rgba(40, 40, 40, 0);
+    }
+    25% {
         background: rgba(40, 40, 40, 0.75);
     }
-    50% {
-        background: rgba(40, 40, 40, 0.55);
-    }
+	75% {
+		background: rgba(40, 40, 40, 0.75);
+	}
     100% {
-        background: rgba(40, 40, 40, 0.75);
+        background: rgba(40, 40, 40, 0);
     }
 }
 </style>

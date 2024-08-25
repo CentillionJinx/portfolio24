@@ -47,6 +47,11 @@ body {
 	src: url("../src/lib/fonts/Slim.ttf");
 }
 
+@font-face {
+	font-family: 'Content';
+	src: url("../src/lib/fonts/Content.ttf");
+}
+
 .boldText {
 	font-family: 'Bold';
 }
@@ -57,6 +62,10 @@ body {
 
 .slimText {
 	font-family: 'Slim';
+}
+
+.contentText {
+	font-family: 'Content';
 }
 
 h1,

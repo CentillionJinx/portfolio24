@@ -22,11 +22,6 @@
 					filter="blur(5px)"
 				>
 					<defs>
-						<!-- <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-							<stop offset="0%" style="stop-color: rgb(184, 187, 38);" />
-							<stop offset="50%" style="stop-color: rgb(250, 189, 47);" />
-							<stop offset="100%" style="stop-color: rgb(251, 73, 52);" />
-						</linearGradient> -->
 						<radialGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%"
 							><stop offset="0%" style="stop-color: rgb(184, 187, 38);" />
 							<stop offset="50%" style="stop-color: rgb(250, 189, 47);" />
