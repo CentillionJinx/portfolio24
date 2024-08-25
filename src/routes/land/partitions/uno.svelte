@@ -100,7 +100,7 @@
 <div class="container">
 	<div class="left rounded-2xl">
 		<div class="border-4 blurred border-[#fe8019] pic-container hover:scale-105">
-			<img src="src/lib/images/portrait.webp" alt="profile" class="blur-sm" />
+			<img src="../src/lib/images/portrait.webp" alt="profile" class="blur-sm" />
 			<p class=" text-primary royalText text-9xl">Gururam</p>
 		</div>
 		<div class=" border-4 blurred border-[#fe8019] hover:scale-105">
