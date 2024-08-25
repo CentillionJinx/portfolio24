@@ -60,7 +60,7 @@
 		width: 100%;
 	}
 	.blurred {
-		background: rgba(40, 40, 40, 0.43);
+		animation: pulsate-bg 1s infinite ease-in-out;
 		border-radius: 1rem;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 		backdrop-filter: blur(13.5px);
@@ -116,4 +116,15 @@
 			opacity: 0;
 		}
 	}
+	@keyframes pulsate-bg {
+    0% {
+        background: rgba(40, 40, 40, 0.75);
+    }
+    50% {
+        background: rgba(40, 40, 40, 0.55);
+    }
+    100% {
+        background: rgba(40, 40, 40, 0.75);
+    }
+}
 </style>

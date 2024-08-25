@@ -42,12 +42,21 @@ body {
 	src: url("../src/lib/fonts/Royal.otf");
 }
 
+@font-face {
+	font-family: 'Slim';
+	src: url("../src/lib/fonts/Slim.ttf");
+}
+
 .boldText {
 	font-family: 'Bold';
 }
 
 .royalText {
 	font-family: 'Royal';
+}
+
+.slimText {
+	font-family: 'Slim';
 }
 
 h1,
