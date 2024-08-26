@@ -39,17 +39,17 @@ body {
 
 @font-face {
 	font-family: 'Royal';
-	src: url("../src/lib/fonts/Royal.otf");
+	src: url('../src/lib/fonts/Royal.otf');
 }
 
 @font-face {
 	font-family: 'Slim';
-	src: url("../src/lib/fonts/Slim.ttf");
+	src: url('../src/lib/fonts/Slim.ttf');
 }
 
 @font-face {
 	font-family: 'Content';
-	src: url("../src/lib/fonts/Content.ttf");
+	src: url('../src/lib/fonts/Content.ttf');
 }
 
 .boldText {
@@ -66,6 +66,20 @@ body {
 
 .contentText {
 	font-family: 'Content';
+}
+
+/* Hide elements in mobile portrait orientation */
+@media (max-width: 767px) and (orientation: portrait) {
+	.MobilePortraitHidden {
+		display: none;
+	}
+}
+
+/* Hide elements in mobile landscape orientation */
+@media (max-width: 767px) and (orientation: landscape) {
+	.MobileLandscapeHidden {
+		display: none;
+	}
 }
 
 h1,

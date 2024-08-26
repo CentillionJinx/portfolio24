@@ -4,7 +4,7 @@
 <div class="tldr">
 	<div class="content absolute mx-16">
 		<p class="contentText text-primary text-right leading-8 tracking-wide">
-			<span class=" text-3xl">A</span> highly motivated and skilled programmer and engineer with a proven
+			<span class="lg:text-3xl md:text-xl sm:text-xs">A</span> highly motivated and skilled programmer and engineer with a proven
 			track record of success in developing and implementing innovative solutions. My passion for technology
 			began at a young age and has driven me to continually expand my knowledge and expertise. Throughout
 			my academic and professional career, I have gained a strong foundation in a variety of technical

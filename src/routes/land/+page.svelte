@@ -10,7 +10,7 @@
 	<section class="bg-secondary rounded-2xl">
 		<div>
 			<div
-				class=" absolute w-[900px] h-[900px] top-0 bottom-0 left-0 right-0 m-auto MobilePortrait:hidden MobileLandscape:hidden"
+				class="absolute w-[900px] h-[900px] top-0 bottom-0 left-0 right-0 m-auto MobilePortraitHidden MobileLandscapeHidden"
 			>
 				<svg
 					version="1.1"
