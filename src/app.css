@@ -19,7 +19,8 @@
 }
 
 body {
-	min-height: 100vh;
+	/* min-height: 100vh; */
+	min-height: -webkit-fill-available;
 	margin: 0;
 	background-attachment: fixed;
 	background-color: var(--color-bg-1);
@@ -30,6 +31,10 @@ body {
 			rgba(255, 255, 255, 0) 100%
 		),
 		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+}
+
+html {
+height: -webkit-fill-available;
 }
 
 @font-face {

@@ -18,53 +18,51 @@
 
 <div class="contain">
 	<div class="grid-container">
-		<a href="https://www.python.org/" class="no-underline">
-			<div class="grid-item grid-item-1">
-				<svelte:component this={Python} />
-			</div>
+		<a href="https://www.python.org/" class="grid-item grid-item-1">
+			<svelte:component this={Python} />
 		</a>
-		<div class="grid-item grid-item-2">
+		<a href="https://www.gnu.org/software/gnu-c-manual/" class="grid-item grid-item-2">
 			<svelte:component this={CProg} />
-		</div>
-		<div class="grid-item grid-item-3">
+		</a>
+		<a href="https://www.verilog.com/" class="grid-item grid-item-3">
 			<svelte:component this={Verilog} />
-		</div>
-		<div class="grid-item grid-item-4">
+		</a>
+		<a href="https://learn.microsoft.com/en-us/dotnet/csharp/" class="grid-item grid-item-4">
 			<svelte:component this={CHashProg} />
-		</div>
-		<div class="grid-item grid-item-5">
+		</a>
+		<a href="https://code.visualstudio.com/" class="grid-item grid-item-5">
 			<svelte:component this={Vsc} />
-		</div>
-		<div class="grid-item grid-item-6">
+		</a>
+		<a href="https://www.figma.com/" class="grid-item grid-item-6">
 			<svelte:component this={Figma} />
-		</div>
-		<div class="grid-item grid-item-7">
+		</a>
+		<a href="https://www.blender.org/" class="grid-item grid-item-7">
 			<svelte:component this={Blender} />
-		</div>
-		<div class="grid-item grid-item-8">
+		</a>
+		<a href="https://react.dev/" class="grid-item grid-item-8">
 			<svelte:component this={React} />
-		</div>
-		<div class="grid-item grid-item-9">
+		</a>
+		<a href="https://expressjs.com/" class="grid-item grid-item-9">
 			<svelte:component this={Expressjs} />
-		</div>
-		<div class="grid-item grid-item-10">
+		</a>
+		<a href="https://clerk.com/" class="grid-item grid-item-10">
 			<svelte:component this={Clerk} />
-		</div>
+		</a>
 		<div class="grid-item grid-item-11 info">
 			<svelte:component this={Info} />
 		</div>
-		<div class="grid-item grid-item-12">
+		<a href="https://bun.sh/" class="grid-item grid-item-12">
 			<svelte:component this={Bun} />
-		</div>
-		<div class="grid-item grid-item-13">
+		</a>
+		<a href="https://trpc.io/" class="grid-item grid-item-13">
 			<svelte:component this={Trpc} />
-		</div>
-		<div class="grid-item grid-item-14">
+		</a>
+		<a href="https://svelte.dev/" class="grid-item grid-item-14">
 			<svelte:component this={Svelte} />
-		</div>
-		<div class="grid-item grid-item-15">
+		</a>
+		<a href="https://www.mongodb.com/" class="grid-item grid-item-15">
 			<svelte:component this={Mongodb} />
-		</div>
+		</a>
 	</div>
 </div>
 
@@ -89,6 +87,10 @@
 			'box1  box7  box11 box11 box8  box8'
 			'box9  box7  box11 box11 box10 box12'
 			'box13 box14 box15 box15 box15 box15';
+	}
+
+	a {
+		text-decoration: none !important;
 	}
 
 	@media (max-width: 1400px) {
@@ -119,12 +121,6 @@
 			height: 48px;
 		}
 	}
-
-	a.no-underline {
-		text-decoration: none !important; /* Remove underline */
-		color: inherit !important; /* Ensure the link inherits the color of its parent */
-	}
-
 	.grid-item {
 		padding: 0.5rem 1rem;
 		text-align: center;
