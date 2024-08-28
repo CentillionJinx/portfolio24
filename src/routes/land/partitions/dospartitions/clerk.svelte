@@ -1,7 +1,7 @@
 <div class="flex h-full flex-col items-center justify-evenly">
 	<div class="flex flex-col items-center">
 		<img
-			src="https://imgix.cosmicjs.com/9d8bc340-e63d-11ee-b074-b5c8fe3ef189-clerk.webp?w=1200&auto=format,compression"
+			src="https://i.ibb.co/PzWhPtt/9d8bc340-e63d-11ee-b074-b5c8fe3ef189-clerk.webp"
 			alt="Clerk Icon"
 			width="96"
 			height="96"

@@ -86,6 +86,7 @@
 		align-items: center;
 		overflow-y: scroll;
 		scroll-snap-type: y mandatory;
+		scroll-behavior: smooth;
 		scrollbar-width: none;
 	}
 	section::-webkit-scrollbar {

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Python from './dospartitions/python.svelte';
 	import CProg from './dospartitions/cProg.svelte';
 	import Verilog from './dospartitions/verilog.svelte';
@@ -13,14 +13,16 @@
 	import Bun from './dospartitions/bun.svelte';
 	import Trpc from './dospartitions/trpc.svelte';
 	import Mongodb from './dospartitions/mongodb.svelte';
-    import Info from './dospartitions/info.svelte';
+	import Info from './dospartitions/info.svelte';
 </script>
 
 <div class="contain">
 	<div class="grid-container">
-		<div class="grid-item grid-item-1">
-			<svelte:component this={Python} />
-		</div>
+		<a href="https://www.python.org/" class="no-underline">
+			<div class="grid-item grid-item-1">
+				<svelte:component this={Python} />
+			</div>
+		</a>
 		<div class="grid-item grid-item-2">
 			<svelte:component this={CProg} />
 		</div>
@@ -48,7 +50,7 @@
 		<div class="grid-item grid-item-10">
 			<svelte:component this={Clerk} />
 		</div>
-		<div class="grid-item grid-item-11">
+		<div class="grid-item grid-item-11 info">
 			<svelte:component this={Info} />
 		</div>
 		<div class="grid-item grid-item-12">
@@ -73,6 +75,7 @@
 		height: 80%;
 		justify-content: center;
 		align-items: center;
+		text-decoration: none !important;
 	}
 	.grid-container {
 		width: 100%; /* Make sure the grid-container takes full width */
@@ -87,6 +90,41 @@
 			'box9  box7  box11 box11 box10 box12'
 			'box13 box14 box15 box15 box15 box15';
 	}
+
+	@media (max-width: 1400px) {
+		.contain {
+			width: 90%;
+			height: 90%;
+		}
+		.grid-container {
+			margin: 0rem;
+			grid-template-areas:
+				'box11  box11'
+				'box1   box2'
+				'box3   box4'
+				'box5   box6'
+				'box7   box8'
+				'box9   box10'
+				'box12  box13'
+				'box14  box15';
+		}
+		:global(.grid-item p, .grid-item span) {
+			display: none;
+		}
+		:global(.grid-item div) {
+			justify-content: center;
+		}
+		:global(.grid-item img, .grid-item svg) {
+			width: 48px;
+			height: 48px;
+		}
+	}
+
+	a.no-underline {
+		text-decoration: none !important; /* Remove underline */
+		color: inherit !important; /* Ensure the link inherits the color of its parent */
+	}
+
 	.grid-item {
 		padding: 0.5rem 1rem;
 		text-align: center;
@@ -95,7 +133,7 @@
 		align-items: center;
 		flex-direction: column;
 		border-radius: 1rem;
-        border: 2px solid #83a598;
+		/* border: 2px solid #83a598; */
 		overflow: hidden;
 		transition: all 0.3s ease-in-out;
 		background: rgba(40, 40, 40, 0.45);
@@ -103,10 +141,16 @@
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
 	}
-    .grid-item:hover {
-        transform: scale(1.05);
-        background: rgba(40, 40, 40, 0.75);
-    }
+	.info {
+		background: rgba(50, 48, 47, 1);
+	}
+	.info:hover {
+		background: rgba(50, 48, 47, 1) !important;
+	}
+	.grid-item:hover {
+		transform: scale(1.03);
+		background: rgba(40, 40, 40, 0.75);
+	}
 	.grid-item-1 {
 		grid-area: box1;
 	}
