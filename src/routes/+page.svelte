@@ -8,7 +8,7 @@
 	<section class={isBlurred ? 'blurred' : ''}>
 		<div class="overlap-container">
 			<p
-				class="text-[22rem] blur-sm {showText ? 'fade-in' : 'fade-out'} text-primary vertical-text"
+				class="text-[22rem] blur-sm {showText ? 'fade-in' : 'fade-out'} text-primary vertical-text MobilePortraitHidden MobileLandscapeHidden"
 			>
 				エ&nbsp;&nbsp;&nbsp;ゴ
 			</p>
