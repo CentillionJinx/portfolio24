@@ -2,7 +2,7 @@
 	import portrait from '../../../../lib/images/portrait.webp';
 </script>
 
-<div class="border-4 blurred border-[#fe8019] pic-container hover:scale-105">
+<div class="border-4 blurred border-none pic-container hover:scale-105">
 	<img src={portrait} alt="profile" class="blur-sm" />
 	<p class=" text-primary royalText text-9xl">Gururam</p>
 </div>
@@ -21,6 +21,8 @@
 	}
 	.pic-container {
 		position: relative;
+		box-shadow: inset 7px 7px 100px #202020,
+            inset -7px -7px 100px #303030;
 		/* width: 100%; */
 	}
 	.pic-container img {

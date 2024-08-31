@@ -97,7 +97,7 @@
 	onDestroy(stopTyping);
 </script>
 
-<div class=" border-4 blurred border-[#fe8019] hover:scale-105">
+<div class="border-4 blurred border-none hover:scale-105">
 	<p
 		class="text-info text-4xl slimText flex tracking-widest h-6 my-6 after:animate-blinking before:content-['»'] after:content-['«']"
 	>
@@ -116,6 +116,8 @@
 	.border-4 {
 		margin: 1rem;
 		border-radius: 1rem;
+		box-shadow: inset 7px 7px 100px #202020,
+            inset -7px -7px 100px #303030;
 	}
 	div {
 		flex: 1;

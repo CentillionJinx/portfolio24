@@ -2,35 +2,43 @@
 	import Layout from './+layout.svelte';
 	let isBlurred = false;
 	let showText = false;
+
+	// Function to handle hover and focus events
+	function handleMouseOver() {
+		if (window.innerWidth > 1400) {
+			// Adjust the width as per your mobile breakpoint
+			isBlurred = true;
+			showText = true;
+		}
+	}
+
+	// Function to handle mouseout and blur events
+	function handleMouseOut() {
+		if (window.innerWidth > 1400) {
+			// Adjust the width as per your mobile breakpoint
+			isBlurred = false;
+			showText = false;
+		}
+	}
 </script>
 
 <Layout>
 	<section class={isBlurred ? 'blurred' : ''}>
 		<div class="overlap-container">
 			<p
-				class="text-[22rem] blur-sm {showText ? 'fade-in' : 'fade-out'} text-primary vertical-text MobilePortraitHidden MobileLandscapeHidden"
+				class="text-[22rem] blur-sm {showText
+					? 'fade-in'
+					: 'fade-out'} text-primary vertical-text MobileHidden"
 			>
 				エ&nbsp;&nbsp;&nbsp;ゴ
 			</p>
 			<a href="/land"
 				><button
 					class="btn btn-outline btn-lg btn-secondary royalText tracking-widest text-2xl hover:tracking-[0.5em]"
-					on:mouseover={() => {
-						isBlurred = true;
-						showText = true;
-					}}
-					on:focus={() => {
-						isBlurred = true;
-						showText = true;
-					}}
-					on:mouseout={() => {
-						isBlurred = false;
-						showText = false;
-					}}
-					on:blur={() => {
-						isBlurred = false;
-						showText = false;
-					}}
+					on:mouseover={handleMouseOver}
+					on:focus={handleMouseOver}
+					on:mouseout={handleMouseOut}
+					on:blur={handleMouseOut}
 				>
 					<span class=" hover:text-primary">Welcome</span>
 				</button></a
@@ -117,17 +125,17 @@
 		}
 	}
 	@keyframes pulsate-bg {
-    0% {
-        background: rgba(40, 40, 40, 0);
-    }
-    35% {
-        background: rgba(40, 40, 40, 0.75);
-    }
-	65% {
-		background: rgba(40, 40, 40, 0.75);
+		0% {
+			background: rgba(40, 40, 40, 0);
+		}
+		35% {
+			background: rgba(40, 40, 40, 0.75);
+		}
+		65% {
+			background: rgba(40, 40, 40, 0.75);
+		}
+		100% {
+			background: rgba(40, 40, 40, 0);
+		}
 	}
-    100% {
-        background: rgba(40, 40, 40, 0);
-    }
-}
 </style>

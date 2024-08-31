@@ -74,15 +74,8 @@ html {
 }
 
 /* Hide elements in mobile portrait orientation */
-@media (max-width: 1400px) and (orientation: portrait) {
-	.MobilePortraitHidden {
-		display: none;
-	}
-}
-
-/* Hide elements in mobile landscape orientation */
-@media (max-width: 1400px) and (orientation: landscape) {
-	.MobileLandscapeHidden {
+@media (max-width: 1400px) {
+	.MobileHidden {
 		display: none;
 	}
 }

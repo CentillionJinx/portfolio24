@@ -10,7 +10,7 @@
 <Layout>
 	<section class="bg-secondary rounded-2xl">
 		<div
-			class="absolute w-[900px] h-[900px] top-0 bottom-0 left-0 right-0 m-auto MobilePortraitHidden MobileLandscapeHidden"
+			class="absolute w-[900px] h-[900px] top-0 bottom-0 left-0 right-0 m-auto MobileHidden"
 		>
 			<svg
 				version="1.1"
@@ -91,7 +91,7 @@
 		width: 98vw;
 		justify-content: center;
 		align-items: center;
-		/* scroll-snap-type: y mandatory; */
+		scroll-snap-type: y mandatory;
 		overflow-y: scroll;
 		scroll-behavior: smooth;
 		scrollbar-width: none;

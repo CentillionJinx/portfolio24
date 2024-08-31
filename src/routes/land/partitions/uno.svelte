@@ -9,7 +9,7 @@
 		<svelte:component this={Profile} />
 		<svelte:component this={Titles} />
 	</div>
-	<div class="right border-4 blurred border-[#fe8019] hover:scale-105">
+	<div class="right border-4 blurred hover:scale-105 border-none">
 		<svelte:component this={Tldr} />
 	</div>
 </div>
@@ -40,6 +40,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		box-shadow: inset 7px 7px 100px #202020,
+            inset -7px -7px 100px #303030;
 	}
 	.hover\:scale-105 {
 		transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);

@@ -132,8 +132,9 @@
 		/* border: 2px solid #83a598; */
 		overflow: hidden;
 		transition: all 0.3s ease-in-out;
-		background: rgba(40, 40, 40, 0.45);
-		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		/* background: rgba(40, 40, 40, 0.45); */
+		box-shadow: inset 7px 7px 100px #202020,
+            inset -7px -7px 100px #303030;
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
 	}
