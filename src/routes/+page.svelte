@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Layout from './+layout.svelte';
+	import { goto } from '$app/navigation';
 	let isBlurred = false;
 	let showText = false;
 
@@ -20,6 +21,10 @@
 			showText = false;
 		}
 	}
+
+	function handleClick() {
+		goto('/land'); // Navigate using goto
+	}
 </script>
 
 <Layout>
@@ -32,17 +37,16 @@
 			>
 				エ&nbsp;&nbsp;&nbsp;ゴ
 			</p>
-			<a href="/land"
-				><button
-					class="btn btn-outline btn-lg btn-secondary royalText tracking-widest text-2xl hover:tracking-[0.5em]"
-					on:mouseover={handleMouseOver}
-					on:focus={handleMouseOver}
-					on:mouseout={handleMouseOut}
-					on:blur={handleMouseOut}
-				>
-					<span class=" hover:text-primary">Welcome</span>
-				</button></a
+			<button
+				class="btn btn-outline btn-lg btn-secondary royalText tracking-widest text-2xl hover:tracking-[0.5em]"
+				on:click={handleClick}
+				on:mouseover={handleMouseOver}
+				on:focus={handleMouseOver}
+				on:mouseout={handleMouseOut}
+				on:blur={handleMouseOut}
 			>
+				<span class=" hover:text-primary">Welcome</span>
+			</button>
 		</div>
 	</section>
 </Layout>
@@ -93,19 +97,11 @@
 		animation: fadeOut 0.7s ease-in-out forwards;
 	}
 	.overlap-container p,
-	.overlap-container a {
+	.overlap-container button {
 		position: absolute;
 	}
 	.vertical-text {
 		display: inline-block;
-	}
-
-	@media (max-width: 1060px) {
-		.vertical-text {
-			writing-mode: vertical-rl;
-			transform: rotate(180deg);
-			font-size: 12rem;
-		}
 	}
 	@keyframes fadeIn {
 		from {

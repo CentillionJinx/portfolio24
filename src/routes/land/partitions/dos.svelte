@@ -18,49 +18,49 @@
 
 <div class="contain">
 	<div class="grid-container">
-		<a href="https://www.python.org/" class="grid-item grid-item-1">
+		<a href="https://www.python.org/" class="grid-item grid-item-1 hover:scale-105">
 			<svelte:component this={Python} />
 		</a>
-		<a href="https://www.gnu.org/software/gnu-c-manual/" class="grid-item grid-item-2">
+		<a href="https://www.gnu.org/software/gnu-c-manual/" class="grid-item grid-item-2 hover:scale-105">
 			<svelte:component this={CProg} />
 		</a>
-		<a href="https://www.verilog.com/" class="grid-item grid-item-3">
+		<a href="https://www.verilog.com/" class="grid-item grid-item-3 hover:scale-105">
 			<svelte:component this={Verilog} />
 		</a>
-		<a href="https://learn.microsoft.com/en-us/dotnet/csharp/" class="grid-item grid-item-4">
+		<a href="https://learn.microsoft.com/en-us/dotnet/csharp/" class="grid-item grid-item-4 hover:scale-105">
 			<svelte:component this={CHashProg} />
 		</a>
-		<a href="https://code.visualstudio.com/" class="grid-item grid-item-5">
+		<a href="https://code.visualstudio.com/" class="grid-item grid-item-5 hover:scale-105">
 			<svelte:component this={Vsc} />
 		</a>
-		<a href="https://www.figma.com/" class="grid-item grid-item-6">
+		<a href="https://www.figma.com/" class="grid-item grid-item-6 hover:scale-105">
 			<svelte:component this={Figma} />
 		</a>
-		<a href="https://www.blender.org/" class="grid-item grid-item-7">
+		<a href="https://www.blender.org/" class="grid-item grid-item-7 hover:scale-105">
 			<svelte:component this={Blender} />
 		</a>
-		<a href="https://react.dev/" class="grid-item grid-item-8">
+		<a href="https://react.dev/" class="grid-item grid-item-8 hover:scale-105">
 			<svelte:component this={React} />
 		</a>
-		<a href="https://expressjs.com/" class="grid-item grid-item-9">
+		<a href="https://expressjs.com/" class="grid-item grid-item-9 hover:scale-105">
 			<svelte:component this={Expressjs} />
 		</a>
-		<a href="https://clerk.com/" class="grid-item grid-item-10">
+		<a href="https://clerk.com/" class="grid-item grid-item-10 hover:scale-105">
 			<svelte:component this={Clerk} />
 		</a>
-		<div class="grid-item grid-item-11 info">
+		<div class="grid-item grid-item-11 info hover:scale-105">
 			<svelte:component this={Info} />
 		</div>
-		<a href="https://bun.sh/" class="grid-item grid-item-12">
+		<a href="https://bun.sh/" class="grid-item grid-item-12 hover:scale-105">
 			<svelte:component this={Bun} />
 		</a>
-		<a href="https://trpc.io/" class="grid-item grid-item-13">
+		<a href="https://trpc.io/" class="grid-item grid-item-13 hover:scale-105">
 			<svelte:component this={Trpc} />
 		</a>
-		<a href="https://svelte.dev/" class="grid-item grid-item-14">
+		<a href="https://svelte.dev/" class="grid-item grid-item-14 hover:scale-105">
 			<svelte:component this={Svelte} />
 		</a>
-		<a href="https://www.mongodb.com/" class="grid-item grid-item-15">
+		<a href="https://www.mongodb.com/" class="grid-item grid-item-15 hover:scale-105">
 			<svelte:component this={Mongodb} />
 		</a>
 	</div>
@@ -145,7 +145,7 @@
 		background: rgba(50, 48, 47, 1) !important;
 	}
 	.grid-item:hover {
-		transform: scale(1.03);
+		transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 		background: rgba(40, 40, 40, 0.75);
 	}
 	.grid-item-1 {

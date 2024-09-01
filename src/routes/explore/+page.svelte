@@ -1,11 +1,14 @@
 <script lang="ts">
 	import Layout from '../+layout.svelte';
-	import Uno from './partitions/uno.svelte';
-	import Dos from './partitions/dos.svelte';
-	import Tres from './partitions/tres.svelte';
 	import { onMount } from 'svelte';
+	import Uno from '../land/partitions/uno.svelte';
 	let sectionElement: HTMLElement | null = null;
-	let sections = [Uno, Dos, Tres];
+
+	onMount(() => {
+		if (sectionElement) {
+			sectionElement.classList.add('slide-in-right');
+		}
+	});
 </script>
 
 <Layout>
@@ -22,9 +25,9 @@
 			>
 				<defs>
 					<radialGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%"
-						><stop offset="0%" style="stop-color: rgb(184, 187, 38);" />
-						<stop offset="50%" style="stop-color: rgb(250, 189, 47);" />
-						<stop offset="100%" style="stop-color: rgb(251, 73, 52);" /></radialGradient
+						><stop offset="0%" style="stop-color: rgb(33,253,172);" />
+						<stop offset="50%" style="stop-color: rgb(138,230,58);" />
+						<stop offset="100%" style="stop-color: rgb(106,252,27);" /></radialGradient
 					>
 				</defs>
 				<path id="blob" fill="url(#gradient)" style="opacity: 0.36;"
@@ -66,20 +69,9 @@
 			>
 		</div>
 		<div class="slider relative">
-			{#each sections as section}
-				<div class="section">
-					<svelte:component this={section} />
-				</div>
-			{/each}
-			<!-- <div class="section">
+			<div class="section">
 				<svelte:component this={Uno} />
 			</div>
-			<div class="section">
-				<svelte:component this={Dos} />
-			</div>
-			<div class="section">
-				<svelte:component this={Tres} />
-			</div> -->
 		</div>
 	</section>
 </Layout>

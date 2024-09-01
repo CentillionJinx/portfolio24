@@ -155,3 +155,29 @@ button:focus:not(:focus-visible) {
 	width: 1px;
 	white-space: nowrap;
 }
+
+.slide-out-left {
+	animation: slideOutLeft 1000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+@keyframes slideOutLeft {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-110%);
+	}
+}
+
+.slide-in-right {
+	animation: slideInRight 1000ms cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+@keyframes slideInRight {
+	from {
+		transform: translateX(110%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}

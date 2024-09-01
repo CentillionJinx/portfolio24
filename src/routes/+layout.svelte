@@ -30,5 +30,6 @@
 		flex-direction: column;
 		margin: 0 auto;
 		box-sizing: border-box;
+		overflow-x: hidden;
 	}
 </style>
