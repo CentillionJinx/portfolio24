@@ -33,14 +33,14 @@
 <section>
 	<div class="overlap-container">
 		<button
-			class="btn btn-outline btn-lg btn-secondary royalText tracking-widest text-4xl hover:scale-150"
+			class="btn btn-outline btn-lg btn-primary royalText tracking-widest text-4xl hover:scale-150"
 			on:click={handleClick}
 			on:mouseover={handleMouseOver}
 			on:focus={handleMouseOver}
 			on:mouseout={handleMouseOut}
 			on:blur={handleMouseOut}
 		>
-			<p class=" hover:text-primary h-8 leading-7">→</p>
+			<p class="text-center text-primary tracking-normal">►</p>
 		</button>
 	</div>
 </section>

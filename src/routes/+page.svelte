@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Layout from './+layout.svelte';
+	import { setFavicon, setTitle } from '$lib/functions/favicon';
 	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 	let isBlurred = false;
 	let showText = false;
 
@@ -25,6 +27,10 @@
 	function handleClick() {
 		goto('/land'); // Navigate using goto
 	}
+	onMount(() => {
+		setFavicon('/src/lib/images/welcome.png'); // Set the favicon for this page
+		setTitle('initiate'); // Set the title for this page
+	});
 </script>
 
 <Layout>

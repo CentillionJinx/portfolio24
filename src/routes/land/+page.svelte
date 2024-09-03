@@ -3,9 +3,15 @@
 	import Uno from './partitions/uno.svelte';
 	import Dos from './partitions/dos.svelte';
 	import Tres from './partitions/tres.svelte';
+	import { setFavicon, setTitle } from '$lib/functions/favicon';
 	import { onMount } from 'svelte';
 	let sectionElement: HTMLElement | null = null;
 	let sections = [Uno, Dos, Tres];
+	
+	// onMount(() => {
+	// 	setFavicon('/src/lib/images/land.ico');
+	// 	setTitle('initiated');
+	// });
 </script>
 
 <Layout>
@@ -72,14 +78,14 @@
 				</div>
 			{/each}
 			<!-- <div class="section">
-				<svelte:component this={Uno} />
-			</div>
-			<div class="section">
-				<svelte:component this={Dos} />
-			</div>
-			<div class="section">
-				<svelte:component this={Tres} />
-			</div> -->
+					<svelte:component this={Uno} />
+				</div>
+				<div class="section">
+					<svelte:component this={Dos} />
+				</div>
+				<div class="section">
+					<svelte:component this={Tres} />
+				</div> -->
 		</div>
 	</section>
 </Layout>
@@ -90,7 +96,6 @@
 		width: 98vw;
 		justify-content: center;
 		align-items: center;
-		scroll-snap-type: y mandatory;
 		overflow-y: scroll;
 		scroll-behavior: smooth;
 		scrollbar-width: none;
