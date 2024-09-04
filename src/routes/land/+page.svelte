@@ -3,15 +3,15 @@
 	import Uno from './partitions/uno.svelte';
 	import Dos from './partitions/dos.svelte';
 	import Tres from './partitions/tres.svelte';
-	import { setFavicon, setTitle } from '$lib/functions/favicon';
+	import { setFavicon, setTitle } from '$lib/functions/favicon.js';
 	import { onMount } from 'svelte';
 	let sectionElement: HTMLElement | null = null;
 	let sections = [Uno, Dos, Tres];
 	
-	// onMount(() => {
-	// 	setFavicon('/src/lib/images/land.ico');
-	// 	setTitle('initiated');
-	// });
+	onMount(() => {
+		setFavicon('/src/lib/images/first.png');
+		setTitle('initiated');
+	});
 </script>
 
 <Layout>

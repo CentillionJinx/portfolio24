@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Layout from './+layout.svelte';
-	import { setFavicon, setTitle } from '$lib/functions/favicon';
+	import { setFavicon, setTitle } from '$lib/functions/favicon.js';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	let isBlurred = false;

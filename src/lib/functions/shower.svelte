@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cn } from './utils';
+	import { cn } from './utils.js';
 	import { onMount } from 'svelte';
 
 	export let number = 10;
@@ -30,7 +30,7 @@
 	>
 		<!-- Meteor Tail  -->
 		<div
-			class="pointer-events-none absolute top-1/2 -z-10 h-px w-[50px] -translate-y-1/2 bg-gradient-to-r from-slate-500 via-blue-600/30 to-transparent"
+			class="pointer-events-none absolute top-1/2 -z-10 h-px w-[75px] -translate-y-1/2 bg-gradient-to-r from-slate-500 via-blue-600/30 to-transparent"
 		></div>
 	</span>
 {/each}

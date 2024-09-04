@@ -14,18 +14,25 @@
 	import Trpc from './dospartitions/trpc.svelte';
 	import Mongodb from './dospartitions/mongodb.svelte';
 	import Info from './dospartitions/info.svelte';
+	import Shower from '$lib/functions/shower.svelte';
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-		const gridItems = document.querySelectorAll('.grid-item');
+		const gridItems = document.querySelectorAll('.grid-item:not(.info)');
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					setTimeout(() => {
 						requestAnimationFrame(() => {
-							(entry.target as HTMLElement).style.border = '2px solid #83a598'; // Add your desired border style here
+							(entry.target as HTMLElement).style.backgroundColor = 'rgba(131, 165, 152, 0.2)'; // Subtle background color
 						});
-					}, 6000); // Delay in milliseconds				} else {
+					}, 6000); // Delay in milliseconds				
+					setTimeout(() => {
+						requestAnimationFrame(() => {
+							(entry.target as HTMLElement).style.backgroundColor = 'transparent'; // Remove background color after delay
+						});
+					}, 8000); // Delay in milliseconds
+				} else {
 				}
 			});
 		});
@@ -70,6 +77,7 @@
 			class="grid-item grid-item-11 info animate-shine border border-white/10 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-5 transition-colors"
 		>
 			<svelte:component this={Info} />
+			<Shower number={50} />
 		</div>
 		<a href="https://bun.sh/" class="grid-item grid-item-12">
 			<svelte:component this={Bun} />
