@@ -8,7 +8,7 @@
 		meteorStyles = [];
 		const styles = [...new Array(num)].map(() => ({
 			top: -20,
-			left: Math.floor(Math.random() * 700) + 'px',
+			left: Math.floor(Math.random() * 2000 - 1000) + 'px',
 			animationDelay: Math.random() * 1 + 0.2 + 's',
 			animationDuration: Math.floor(Math.random() * 8 + 2.9) + 's'
 		}));
@@ -30,7 +30,7 @@
 	>
 		<!-- Meteor Tail  -->
 		<div
-			class="pointer-events-none absolute top-1/2 -z-10 h-px w-[75px] -translate-y-1/2 bg-gradient-to-r from-slate-500 via-blue-600/30 to-transparent"
+			class="pointer-events-none absolute top-1/2 -z-10 h-px w-[150px] -translate-y-1/2 bg-gradient-to-r from-slate-500 via-blue-600/30 to-transparent"
 		></div>
 	</span>
 {/each}

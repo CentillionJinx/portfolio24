@@ -6,18 +6,21 @@
 		<p
 			class="contentText text-primary text-right lg:tracking-wide tracking-normal lg:leading-8 leading-5 md:text-xl text-xs"
 		>
-			<span>A</span> highly motivated and skilled programmer and engineer
-			with a proven track record of success in developing and implementing innovative solutions. My passion
-			for technology began at a young age and has driven me to continually expand my knowledge and expertise.
-			Throughout my academic and professional career, I have gained a strong foundation in a variety
-			of technical areas, including embedded systems, object-oriented programming, data structures and
-			algorithms, and artificial intelligence/machine learning. My experience as an Infrastructure Engineer
-			has further solidified my understanding of networking principles and best practices, as demonstrated
-			by my CompTIA A+ and CompTIA Network+ preparation. I am eager to leverage my skills and experience
-			to contribute to a challenging and rewarding role within a forward-thinking organization. I am
-			a quick learner, possess strong problem-solving abilities, and am dedicated to producing high-quality
-			work. I am confident in my ability to adapt to new technologies and contribute effectively to a
-			dynamic team environment.
+			I'm Gururam, and my passion for technology and programming ignited when I was just 11,
+			captivated by Linux and the magic of writing my first lines of Python code. That spark grew
+			into a fascination with the power of technology, leading me deeper into networking during
+			secondary school. I spent hours unraveling the complexities of network protocols with tools
+			like Wireshark and Nmap, feeling like I was deciphering a hidden language of the digital
+			world. My professional journey as an Infrastructure Engineer provided invaluable real-world
+			experience, allowing me to hone my skills further and expand my knowledge through
+			certification preparations like CompTIA A+ and Network+. Each project and challenge was a
+			chance to learn and grow. Today, I'm more driven than ever to make a real-world impact with
+			technology. I'm excited by the constantly evolving digital landscape and embrace every
+			obstacle as an opportunity to learn and find creative solutions. For me, it's not just about
+			the code; it's about the positive impact we can have on the world. I believe in the power of
+			technology to connect, educate, and build a better future. I'm excited to explore new
+			technologies, collaborate with others who share my passion, and continue writing the story of
+			my life, one line of code at a time.
 		</p>
 	</div>
 </div>

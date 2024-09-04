@@ -28,7 +28,7 @@
 		goto('/land'); // Navigate using goto
 	}
 	onMount(() => {
-		setFavicon('/src/lib/images/welcome.png'); // Set the favicon for this page
+		setFavicon('/src/lib/images/welcome.ico'); // Set the favicon for this page
 		setTitle('initiate'); // Set the title for this page
 	});
 </script>

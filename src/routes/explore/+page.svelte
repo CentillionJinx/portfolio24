@@ -3,8 +3,11 @@
 	import { onMount } from 'svelte';
 	import Uno from '../land/partitions/uno.svelte';
 	let sectionElement: HTMLElement | null = null;
+	import { setFavicon, setTitle } from '$lib/functions/favicon.js';
 
 	onMount(() => {
+		setFavicon('/src/lib/images/second.ico');
+		setTitle('explore');
 		if (sectionElement) {
 			sectionElement.classList.add('slide-in-right');
 		}

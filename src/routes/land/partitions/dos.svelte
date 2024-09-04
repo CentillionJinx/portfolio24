@@ -16,22 +16,23 @@
 	import Info from './dospartitions/info.svelte';
 	import Shower from '$lib/functions/shower.svelte';
 	import { onMount } from 'svelte';
-
+	let seen = 0;
 	onMount(() => {
 		const gridItems = document.querySelectorAll('.grid-item:not(.info)');
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
+				if (entry.isIntersecting && seen < 15) {
 					setTimeout(() => {
 						requestAnimationFrame(() => {
 							(entry.target as HTMLElement).style.backgroundColor = 'rgba(131, 165, 152, 0.2)'; // Subtle background color
 						});
-					}, 6000); // Delay in milliseconds				
+					}, 6000); // Delay in milliseconds
 					setTimeout(() => {
 						requestAnimationFrame(() => {
 							(entry.target as HTMLElement).style.backgroundColor = 'transparent'; // Remove background color after delay
 						});
-					}, 8000); // Delay in milliseconds
+					}, 6500); // Delay in milliseconds
+					seen++;
 				} else {
 				}
 			});
@@ -77,7 +78,7 @@
 			class="grid-item grid-item-11 info animate-shine border border-white/10 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-4 py-5 transition-colors"
 		>
 			<svelte:component this={Info} />
-			<Shower number={50} />
+			<Shower number={150} />
 		</div>
 		<a href="https://bun.sh/" class="grid-item grid-item-12">
 			<svelte:component this={Bun} />
@@ -167,6 +168,9 @@
 			inset -7px -7px 100px #303030;
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
+	}
+	.grid-item:not(.info):hover {
+		background: rgba(214, 93, 14, 0.5) !important;
 	}
 	.info {
 		border: none !important;

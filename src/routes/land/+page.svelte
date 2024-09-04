@@ -9,7 +9,7 @@
 	let sections = [Uno, Dos, Tres];
 	
 	onMount(() => {
-		setFavicon('/src/lib/images/first.png');
+		setFavicon('/src/lib/images/first.ico');
 		setTitle('initiated');
 	});
 </script>
